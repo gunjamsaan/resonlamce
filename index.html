@@ -54,11 +54,39 @@
       border-top: 1px solid #333;
       margin: 3em 0;
     }
+    
+    .topbar{
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 999;
+}
+
+#search{
+  width: 240px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid #333;
+  background: #111;
+  color: #eaeaea;
+  outline: none;
+}
+
+#search::placeholder{
+  color: #8a8a8a;
+}
+
+.scene[hidden]{
+  display: none;
+}
   </style>
 </head>
 
 <body>
   <div class="container">
+    <div class="topbar">
+  <input id="search" type="search" placeholder="搜索 场次 / 关键词 / 回响" autocomplete="off">
+</div>
 
     <h1>【搜响引擎3.2.0 - 251224】🪷莲合国莲语等级考试复习资料·迴響Resonance卷🪷</h1>
     <p>
@@ -68,7 +96,7 @@
     </p>
 
     <hr/>
-
+<section class="scene">
     <h2>0222深响首场｜红墨水漏肩上</h2>
 
     <div class="keywords">你➡️➡️↗️⬆️  
@@ -78,63 +106,83 @@
       有啲老土
       再來再來再來
     </div>
-
+</section>  
+  
+<section class="scene">
     <h2>0301厦响｜企鹅宝宝</h2>
 
     <div class="keywords">新女儿
     </div>
-    
+</section>  
+  
+<section class="scene">    
      <h2>0308桂响｜小梨花</h2>
 
     <div class="keywords">乖女儿
     </div>
-
+</section>
+  
+<section class="scene">
     <h2>0322昆响｜紫袍贵妇</h2>
 
     <div class="keywords">小红书冲浪
       它给过谁也要扭两下吗
     </div>
-
+</section>  
+  
+<section class="scene">
     <h2>0405武响｜铁臂阿童妈</h2>
     <div class="keywords">喊妈被喊立正
       你小心你回去的时候喉咙会不会痛呢
       hi～
       女儿们乖乖回家哦回家好好睡觉啊乖乖
     </div>
-
+</section>  
+  
+<section class="scene">
     <h2>0412广响｜双层外套</h2>
     <div class="keywords">好乖好乖咁樣
       边走路边拖地这个勤快
       我哋五歲就識㗎啦
     </div>
+</section>
 
+<section class="scene">  
     <h2>0419常响｜糯米糍</h2>
     <div class="keywords">一周后过生日的小莲想妈妈了
       你们又要把我搞哭啦
       虽然我知道我是你们的妈咪可是我自己也有妈咪
     </div>
-
+</section>  
+  
+<section class="scene">
     <h2>0502昌响｜半袖小天鹅</h2>
     <div class="keywords">为什么我是这么爱哭的一个宝宝
       观众组成调查问卷
       听下面喊南方的风听笑了
       乖乖回家哦女儿们乖乖
     </div>
-
+</section>  
+  
+<section class="scene">
     <h2>0510杭响｜鸳鸯牛仔裤</h2>
     <div class="keywords">八十之约
       你是叫我妈妈吗
       飞的理由捏袖口
       裤子一拽又一拽给再见悲哀唱得如此豪迈
     </div>
-
+</section>  
+  
+<section class="scene">
     <h2>0517川响｜花西装ft.花花</h2>
     <div class="keywords">排山倒海汹涌澎湃冲着台上就去了的爱
       咦不会讲话了
       想当熊猫躺那睡觉滚来滚去
       成都阅读理解
     </div>
-
+</section>  
+  
+<section class="scene">
     <h2>0524京响｜allwhite腰封美女蛇</h2>
     <div class="keywords">算不清五年还是九年
       我开心得迷糊了
@@ -143,21 +191,27 @@
       北京是一座让我可以做自己的城市
       安可枯荣最魅的一场
     </div>
-
+</section>  
+  
+<section class="scene">
     <h2>0531晋响｜皮裤酒保</h2>
     <div class="keywords">突然自我介绍
       回忆的片dun…片段
       啊不会讲话了
       对我要加油！
     </div>
-
+</section>  
+  
+<section class="scene">
     <h2>0621汕响｜暖羊羊妈妈</h2>
     <div class="keywords">係唔係真㗎
       挥手全是残影
       其實細節我真一啲都唔記得
       保留一個surprise俾你哋啦
     </div>
-
+</section>  
+  
+<section class="scene">
     <h2>0705沪响｜白蕾丝囡囡</h2>
     <div class="keywords">最痛的红颜野花
       亮片焊头死活摘不下来
@@ -165,7 +219,9 @@
       忆莲报菜名
       约了一体育场的饭等着吃
     </div>
-
+</section>  
+  
+<section class="scene">
     <h2>0712宁响｜灰花裤跳跳糖</h2>
     <div class="keywords">横开来回跑八百
       我巴不得我可以飞起来
@@ -175,7 +231,9 @@
       小笼包特别好吃
       唱錯左添
     </div>
-
+</section>  
+  
+<section class="scene">
     <h2>0719澳响｜穿身气球就上台了</h2>
     <div class="keywords">打台风
       狂徒拔头顶爱心
@@ -183,29 +241,39 @@
       国粤英三语切换为拿花
       换歌单密谋
     </div>
-
+</section>  
+  
+<section class="scene">
     <h2>0725澳响｜腋下生风狂抓头发</h2>
     <div class="keywords">最震撼的一场莲合国国歌
       都好多謝大家風雨不改的照舊來到
     </div>
-
+</section>  
+  
+<section class="scene">
     <h2>0726澳响｜白衬衫阿芙洛狄忒</h2>
     <div class="keywords">726都能忘不如响学重修呢？
     </div>
-
+</section>  
+  
+<section class="scene">
     <h2>0727澳响｜外浅內深但深的是背心</h2>
     <div class="keywords">幫我攞花花花
       我哋係好多年嘅朋友
       澳响唯一退场飞吻
     </div>
-
+</section>  
+  
+<section class="scene">
     <h2>0802春响｜大到能给内场塞进去的萝卜裤</h2>
     <div class="keywords">不答应唱到100因为不晓得
       冷风吹比心先上车后补票
       你当时只有七岁
       刚刚大家没有跟着我一起唱呢
     </div>
-
+</section>  
+  
+<section class="scene">
     <h2>0809青响｜短裤大露背</h2>
     <div class="keywords">钢筋森林逗逗女孩
       水星记挑眉毛
@@ -221,7 +289,9 @@
       宝贝们一起来
       青春是一种心态
     </div>
-
+</section>  
+  
+<section class="scene">
     <h2>0913津响｜风吹大门框帅得响当当黑马甲</h2>
     <div class="keywords">归零作文咋改写一半撒一半了
       笑笑的
@@ -239,7 +309,9 @@
       你不要太沮丧
       林老师课后答疑
     </div>
-
+</section>  
+  
+<section class="scene">
     <h2>0920温响｜花衣黄裤紫罗兰</h2>
     <div class="keywords">雨下得越来越大了
       唱歌四sí年chóng来没有这样的一个体验
@@ -248,7 +320,9 @@
       你不要弄乱我的头fǎ
       假睫毛被淋掉又硬眨回去了
     </div>
-
+</section>  
+  
+<section class="scene">
     <h2>1002佛响｜星星项链小波斯</h2>
     <div class="keywords">世纪莲在世纪莲
       好似返屋企嘅感覺
@@ -259,7 +333,9 @@
       裸秘密飞吻
       你哋有冇些秘密想跟我講
     </div>
-
+</section>  
+  
+<section class="scene">
     <h2>1007肥响｜小肚小肚软乎乎小山雀</h2>
     <div class="keywords">新裙子盖亚找左手小品
       追月
@@ -269,7 +345,9 @@
       被尖叫爽笑了根本得意
       接飞吻给表情管理接崩了
     </div>
-
+</section>
+  
+<section class="scene">
     <h2>1018湘响｜西装皮裤歌王回宫</h2>
     <div class="keywords">好久不见大家好吗
       比八年前痛百十倍的无赖
@@ -277,7 +355,9 @@
       唔係合肥啊
       年纪有点大了
     </div>
-
+</section>  
+  
+<section class="scene">
     <h2>1025苏响｜一堆黑布拼一起就是一件外套</h2>
     <div class="keywords">都从哪扫的扇子一人一把
       好像不太认识mmxi的自己
@@ -288,7 +368,9 @@
       想要吃面
       啊我都搞糊涂了
     </div>
-
+</section>  
+  
+<section class="scene">
     <h2>1101豫响｜小牛仔</h2>
     <div class="keywords">主人级别的流星群桥
       走几步再得瑟地晃两下头
@@ -304,7 +386,9 @@
       你今年几岁啦
       happybirthday生日快乐先给个爱心再给个飞吻
     </div>
-
+</section>  
+  
+<section class="scene">
     <h2>1108西响｜炕一般保暖的大衣</h2>
     <div class="keywords">自行创造的鹦鹉头
       彻底给开忘是第几场了
@@ -313,7 +397,9 @@
       默读伤悲脸颊比心
       忆莲大点兵
     </div>
-
+</section>  
+  
+<section class="scene">
     <h2>1115渝响｜常服顺毛流苏戒指</h2>
     <div class="keywords">那妈妈来教你一个事情好不好
       不要躲起来/那我猜好了
@@ -324,7 +410,9 @@
       递麦给自己递笑
       重庆交通系统科研
     </div>
-
+</section>  
+  
+<section class="scene">
   <h2>1122湖响｜oldmoney小林总</h2>
     <div class="keywords">忆莲再点兵
       湖州有太湖
@@ -333,7 +421,9 @@
       2003年你还没出生呢
       其实偷偷跟你讲不是我记得是你们提醒我的我在网上看到的
     </div>
-
+</section>  
+  
+<section class="scene">
   <h2>1206福响｜黑丝配大船</h2>
     <div class="keywords">简直是匪夷所shī
       妈妈女王对狙感冒状态神勇
@@ -344,15 +434,50 @@
       好好吃喔
       辛苦你啦～对不起
     </div>
-
+</section>  
+  
+<section class="scene">
   <h2>1231深响跨年｜</h2>
     <div class="keywords">1231
     </div>
-
+</section>  
+  
+<section class="scene">
   <h2>0103深响终章｜</h2>
     <div class="keywords">0103
     </div>
+</section>  
 
   </div>
+  <script>
+  const input = document.getElementById("search");
+  const scenes = Array.from(document.querySelectorAll(".scene"));
+
+  function normalize(text){
+    return (text || "").toLowerCase();
+  }
+
+  input.addEventListener("input", () => {
+    const q = normalize(input.value);
+
+    if (!q) {
+      scenes.forEach(s => s.hidden = false);
+      return;
+    }
+
+    scenes.forEach(scene => {
+      const content = normalize(scene.innerText);
+      scene.hidden = !content.includes(q);
+    });
+  });
+
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      input.value = "";
+      input.dispatchEvent(new Event("input"));
+      input.blur();
+    }
+  });
+</script>
 </body>
 </html>
