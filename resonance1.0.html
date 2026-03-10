@@ -63,17 +63,25 @@
     }
 
 #search{
-  width: 240px;
-  padding: 10px 14px;
+  width: 250px;
+  padding: 11px 16px;
   border-radius: 999px;
-  border: 1px solid #333;
-  background: #111;
-  color: #eaeaea;
+  border: 1.5px solid rgba(244, 122, 0, 0.45);
+  background: rgba(255, 255, 255, 0.92);
+  color: #f47a00;
   outline: none;
+  font-size: 14px;
+  box-shadow: 0 4px 14px rgba(244, 122, 0, 0.08);
+  transition: all 0.2s ease;
 }
 
 #search::placeholder{
-  color: #8a8a8a;
+  color: rgba(244, 122, 0, 0.55);
+}
+
+#search:focus{
+  border-color: #f47a00;
+  box-shadow: 0 0 0 4px rgba(244, 122, 0, 0.12);
 }
 
 .scene[hidden]{
