@@ -1,4 +1,90 @@
-<h1>RESONLAMCE</h1>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RESONLAMCE</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-<a href="resonance1.0.html">2025-2026 RESONANCE</a>
-<a href="resonance2.0.html">2026 RESONANCE: Reconstructed</a>
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+      color: #f47a00;
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 24px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 420px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 52px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: #c96a08;
+      margin-bottom: 36px;
+      line-height: 1.5;
+    }
+
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .nav-button {
+      display: block;
+      width: 100%;
+      padding: 18px 20px;
+      border-radius: 16px;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .nav-button.primary {
+      background: #f47a00;
+      color: #fff;
+    }
+
+    .nav-button.secondary {
+      background: transparent;
+      color: #f47a00;
+      border: 2px solid #f47a00;
+    }
+
+    .nav-button:hover {
+      transform: translateY(-2px);
+      opacity: 0.92;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>RESONLAMCE</h1>
+    <p class="subtitle">·All for Sandy Lam·</p>
+
+    <div class="button-group">
+      <a class="nav-button primary" href="resonance1.0.html">2025–2026 RESONANCE</a>
+      <a class="nav-button secondary" href="resonance2.0.html">2026 RESONANCE: Reconstructed</a>
+    </div>
+  </div>
+</body>
+</html>
