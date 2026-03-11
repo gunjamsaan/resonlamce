@@ -19,17 +19,18 @@
       background: #fff;
       color: #f47a00;
       font-family: Arial, Helvetica, sans-serif;
-      padding: 24px;
+      padding: 32px 24px;
     }
 
     .container {
-  width: min(100%, 420px);
+  width: 100%;
+  max-width: 420px;
   margin: 0 auto;
   text-align: center;
 }
 
     h1 {
-  font-size: clamp(40px, 11vw, 72px);
+  font-size: clamp(32px, 9vw, 64px);
   font-weight: 800;
   letter-spacing: 1px;
   line-height: 1.05;
@@ -37,7 +38,7 @@
 }
 
     .subtitle {
-      font-size: 18px;
+      font-size: clamp(18px, 4vw, 24px);
       color: #c96a08;
       margin-bottom: 36px;
       line-height: 1.5;
@@ -46,17 +47,21 @@
     .button-group {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 18px;
     }
 
     .nav-button {
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 100%;
+      min-height: 82px;
       padding: 18px 20px;
-      border-radius: 16px;
+      border-radius: 22px;
       text-decoration: none;
-      font-size: 20px;
+      font-size: clamp(18px, 4.8vw, 24px);
       font-weight: 700;
+      text-align: center;
       transition: 0.2s ease;
     }
 
@@ -75,6 +80,27 @@
       transform: translateY(-2px);
       opacity: 0.92;
     }
+    
+@media (min-width: 768px) {
+  .container {
+    max-width: 560px;
+  }
+
+  h1 {
+    font-size: 76px;
+    margin-bottom: 22px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+
+  .nav-button {
+    min-height: 72px;
+    font-size: 18px;
+  }
+}
   </style>
 </head>
 <body>
