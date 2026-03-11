@@ -1,7 +1,7 @@
 # resonlamce
 
 - 2605 搜响引擎5.0 -> Resonance Reconstructed: Hong Kong Exclusive 0516-0517
-- 260310 整体更新 -> 增加主页面、Resonance 1.0, Resonance 2.0
+- 260310 整体更新 -> 增加主页面、Resonance 1.0、Resonance 2.0
 - 260107 搜响引擎4.1.0 -> 更新1231深响跨年 & 0103回响终章
 - 251226 搜响引擎3.2.1
   - 251224 搜响引擎3.2.0
