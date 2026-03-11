@@ -6,117 +6,138 @@
   <title>RESONLAMCE</title>
   <style>
     * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-    body {
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #fff;
-      color: #f47a00;
-      font-family: Arial, Helvetica, sans-serif;
-      padding: 32px 24px;
-    }
+  body {
+    min-height: 100vh;
+    background: #f5f5f5;
+    color: #f47a00;
+    padding: 0;
+  }
 
-    .container {
-  width: 100%;
-  max-width: 420px;
-  margin: 0 auto;
-  text-align: center;
-}
+  .page {
+    width: 100%;
+    min-height: 1024px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 277px;
+  }
 
-    h1 {
-  font-size: clamp(50px, 11vw, 72px);
-  font-weight: 800;
-  letter-spacing: 1px;
-  line-height: 1.05;
-  margin-bottom: 20px;
-}
-
-    .subtitle {
-      font-size: clamp(15px, 4vw, 24px);
-      color: #c96a08;
-      margin-bottom: 36px;
-      line-height: 1.5;
-    }
-
-    .button-group {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
-
-    .nav-button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      min-height: 82px;
-      padding: 18px 20px;
-      border-radius: 22px;
-      text-decoration: none;
-      font-size: clamp(18px, 4.8vw, 24px);
-      font-weight: 700;
-      text-align: center;
-      transition: 0.2s ease;
-    }
-
-    .nav-button.primary {
-      background: #f47a00;
-      color: #fff;
-    }
-
-    .nav-button.secondary {
-      background: transparent;
-      color: #f47a00;
-      border: 2px solid #f47a00;
-    }
-
-    .nav-button:hover {
-      transform: translateY(-2px);
-      opacity: 0.92;
-    }
-    
-@media (min-width: 768px) {
   .container {
-    max-width: 560px;
+    width: 334px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   h1 {
-    font-size: clamp(38px, 8vw, 44px);
-    margin-bottom: 16px;
+    font-family: "Bona Nova", serif;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+    color: #f47a00;
+    margin: 0;
+    text-align: center;
   }
 
   .subtitle {
-    font-size: clamp(16px, 5vw, 20px);
-    margin-bottom: 28px;
+    margin-top: 56px;
+    font-family: "Maname", serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 145%;
+    letter-spacing: -0.005em;
+    color: #969696;
+    text-align: center;
   }
-  
+
   .button-group {
-    gap: 14px;
+    margin-top: 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 334px;
   }
-  
+
   .nav-button {
-    min-height: 84px;
-    padding: 16px 20px;
-    font-size: clamp(16px, 4.6vw, 20px);
-    border-radius: 20px;
+    width: 334px;
+    height: 50px;
+    border-radius: 12px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 145%;
+    letter-spacing: -0.005em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .nav-button.primary {
+    background: #f47a00;
+    color: #ffffff;
+    border: none;
+  }
+
+  .nav-button.secondary {
+    background: transparent;
+    color: #f47a00;
+    border: 2px solid #f47a00;
+  }
+
+    
+@media (max-width: 768px) {
+  .page {
+    min-height: 844px;
+    padding-top: 80px;
+  }
+
+  .container {
+    width: 342px;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  .subtitle {
+    margin-top: 44px;
+    font-size: 24px;
+  }
+
+  .button-group {
+    width: 342px;
+    margin-top: 44px;
+    gap: 16px;
+  }
+
+  .nav-button {
+    width: 342px;
+    height: 47px;
+    font-size: 16px;
+    padding: 0 12px;
   }
 }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>RESONLAMCE</h1>
-    <p class="subtitle">·All for Sandy Lam·</p>
+  <div class="page">
+    <div class="container">
+      <h1>RESONLAMCE</h1>
+      <p class="subtitle">·All for Sandy Lam·</p>
 
-    <div class="button-group">
-      <a class="nav-button primary" href="resonance1.0.html">2025–2026 RESONANCE</a>
-      <a class="nav-button secondary" href="resonance2.0.html">2026 RESONANCE: Reconstructed</a>
+      <div class="button-group">
+        <a class="nav-button primary" href="resonance1.0.html">2025–2026 RESONANCE</a>
+        <a class="nav-button secondary" href="resonance2.0.html">2026 RESONANCE: Reconstructed</a>
+      </div>
     </div>
   </div>
 </body>
