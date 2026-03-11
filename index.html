@@ -87,18 +87,24 @@
   }
 
   h1 {
-    font-size: 76px;
-    margin-bottom: 22px;
+    font-size: clamp(40px, 12vw, 52px);
+    margin-bottom: 16px;
   }
 
   .subtitle {
-    font-size: 20px;
-    margin-bottom: 40px;
+    font-size: clamp(20px, 5vw, 24px);
+    margin-bottom: 28px;
   }
-
+  
+  .button-group {
+    gap: 14px;
+  }
+  
   .nav-button {
-    min-height: 72px;
-    font-size: 18px;
+    min-height: 84px;
+    padding: 16px 20px;
+    font-size: clamp(16px, 4.6vw, 20px);
+    border-radius: 20px;
   }
 }
   </style>
