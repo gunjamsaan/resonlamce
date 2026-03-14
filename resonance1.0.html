@@ -24,7 +24,7 @@
     
 .content-layout {
   display: grid;
-  grid-template-columns: 120px minmax(0, 1fr);
+  grid-template-columns: 92px minmax(0, 1fr);
   gap: 32px;
   align-items: start;
 }
@@ -42,11 +42,9 @@
 }
 
 .side-nav-item {
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  padding: 10px 14px;
+  display: block;
+  width: 92px;
+  padding: 10px 12px;
   border-radius: 999px;
   background: rgba(244, 122, 0, 0.12);
   color: #f47a00;
@@ -54,6 +52,9 @@
   font-family: "Inter", sans-serif;
   font-size: 14px;
   line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
   transition: transform 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
 }
 
