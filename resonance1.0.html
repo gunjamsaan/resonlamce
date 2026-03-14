@@ -22,21 +22,30 @@
       margin: 0 auto;
     }
 
+    .content-layout {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr);
+    gap: 32px;
+    align-items: start;
+    }
+      
     .side-nav {
-    position: fixed;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
+    position: sticky;
+    top: 120px;
     display: flex;
     flex-direction: column;
     gap: 12px;
-    z-index: 1000;
-    }
+    align-self: start;
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
+    padding-right: 6px;
+    } 
 
     .side-nav-item {
     display: inline-flex;
     align-items: center;
-    min-width: 72px;
+    justify-content: flex-start;
+    width: 100%;
     padding: 10px 14px;
     border-radius: 999px;
     background: rgba(244, 122, 0, 0.12);
@@ -44,14 +53,18 @@
     text-decoration: none;
     font-family: "Inter", sans-serif;
     font-size: 14px;
-    transform: translateX(-28px);
+    line-height: 1;
     transition: transform 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
     }
 
     .side-nav-item:hover {
-    transform: translateX(0);
+    transform: translateX(8px);
     background: rgba(244, 122, 0, 0.2);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    }
+
+    .scene-list {
+    min-width: 0;
     }
     
     html {
@@ -64,6 +77,9 @@
   }
   .side-nav {
     display: none;
+  }
+  .content-layout{
+    display: block;
   }
 }
 
@@ -153,7 +169,20 @@
 
   
 <body>
-  <nav class="side-nav">
+  <div class="container" id = "top">
+    <div class="topbar">
+  <input id="search" type="search" placeholder="搜索 场次 / 安可服 / 莲言莲语" autocomplete="off">
+</div>
+
+    <h1>【搜响引擎4.1.0】🪷莲合国莲语等级考试复习资料·迴響Resonance卷🪷</h1>
+    <p class="notes">
+  <span>（260310编辑）</span><br>
+  <span>-> 5.0预告:增加RESONANCE: Reconstructed 0516/0517港响</span>
+  </p>
+
+    <hr/>
+  <div class="content-layout">
+    <nav class="side-nav">
   <a href="#top" class="side-nav-item">顶部</a>
   <a href="#scene-0222" class="side-nav-item">深圳首场</a>
   <a href="#scene-0301" class="side-nav-item">厦门</a>
@@ -190,19 +219,9 @@
   <a href="#scene-1231" class="side-nav-item">深圳跨年</a>
   <a href="#scene-0103" class="side-nav-item">深圳尾场</a>
 </nav>
-  <div class="container" id = "top">
-    <div class="topbar">
-  <input id="search" type="search" placeholder="搜索 场次 / 安可服 / 莲言莲语" autocomplete="off">
-</div>
 
-    <h1>【搜响引擎4.1.0】🪷莲合国莲语等级考试复习资料·迴響Resonance卷🪷</h1>
-    <p class="notes">
-  <span>（260310编辑）</span><br>
-  <span>-> 5.0预告:增加RESONANCE: Reconstructed 0516/0517港响</span>
-  </p>
-
-    <hr/>
-<section class="scene" id="scene-0222">
+<div class="scene-list">
+    <section class="scene" id="scene-0222">
     <h2>0222深响首场｜红墨水漏肩上</h2>
 
     <div class="keywords">“你➡️➡️↗️⬆️！”
@@ -620,6 +639,9 @@
 </section>
 
   </div>
+  </div>
+</div>
+  
   <script>
   const input = document.getElementById("search");
   const scenes = Array.from(document.querySelectorAll(".scene"));
