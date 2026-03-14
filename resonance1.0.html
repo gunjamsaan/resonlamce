@@ -22,6 +22,38 @@
       margin: 0 auto;
     }
 
+  .side-nav {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1000;
+}
+
+.side-nav-item {
+  display: inline-flex;
+  align-items: center;
+  min-width: 72px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(244, 122, 0, 0.12);
+  color: #f47a00;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  transform: translateX(-28px);
+  transition: transform 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
+}
+
+.side-nav-item:hover {
+  transform: translateX(0);
+  background: rgba(244, 122, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
 @media (max-width: 768px) {
   .container {
     padding-top: 36px;
@@ -60,6 +92,9 @@
   border-top: 1px solid rgba(244, 122, 0, 0.35);
   margin: 3em 0;
 }
+    .side-nav {
+    display: none;
+  }
 
     .topbar{
       position: fixed;
@@ -111,6 +146,13 @@ a:hover{
 </head>
 
 <body>
+  <nav class="side-nav">
+  <a href="#top" class="side-nav-item">顶部</a>
+  <a href="#scene-0222" class="side-nav-item">0222</a>
+  <a href="#scene-0301" class="side-nav-item">0301</a>
+  <a href="#scene-0315" class="side-nav-item">0315</a>
+</nav>
+  
   <div class="container">
     <div class="topbar">
   <input id="search" type="search" placeholder="搜索 场次 / 安可服 / 莲言莲语" autocomplete="off">
@@ -123,7 +165,7 @@ a:hover{
   </p>
 
     <hr/>
-<section class="scene">
+<section class="scene" id="scene-0222">
     <h2>0222深响首场｜红墨水漏肩上</h2>
 
     <div class="keywords">“你➡️➡️↗️⬆️！”
@@ -136,21 +178,21 @@ a:hover{
     </div>
 </section>  
   
-<section class="scene">
+<section class="scene" id="scene-0301">
     <h2>0301厦响｜企鹅宝宝</h2>
 
     <div class="keywords">新女儿
     </div>
 </section>  
   
-<section class="scene">    
+<section class="scene" id="scene-0308">    
      <h2>0308桂响｜小梨花</h2>
 
     <div class="keywords">“乖女儿～”
     </div>
 </section>
   
-<section class="scene">
+<section class="scene" id="scene-0322">
     <h2>0322昆响｜紫袍贵妇</h2>
 
     <div class="keywords">边唱它给过谁边扭两下的女人怎么样
@@ -160,7 +202,7 @@ a:hover{
     </div>
 </section>  
   
-<section class="scene">
+<section class="scene" id="scene-0405">
     <h2>0405武响｜铁臂阿童妈</h2>
     <div class="keywords">喊妈被喊立正
       “你小心你回去的时候喉咙会不会痛呢🧐要多喝水哟”
@@ -169,7 +211,7 @@ a:hover{
     </div>
 </section>  
   
-<section class="scene">
+<section class="scene" id="scene-0412">
     <h2>0412广响｜双层外套</h2>
     <div class="keywords">边走路边拖地这个勤快
       忆莲稍微点兵
@@ -177,7 +219,7 @@ a:hover{
     </div>
 </section>
 
-<section class="scene">  
+<section class="scene" id="scene-0419">  
     <h2>0419常响｜糯米糍</h2>
     <div class="keywords">一激动想把耳朵也掀下来
       “你们又要把我搞哭啦😿”
@@ -188,7 +230,7 @@ a:hover{
     </div>
 </section>  
   
-<section class="scene">
+<section class="scene" id="scene-0502">
     <h2>0502昌响｜半袖小天鹅</h2>
     <div class="keywords">“为什么我是这么爱哭的一个宝宝🥲”
       “我觉得我们好像一起经过了很多事情的感觉”
@@ -198,7 +240,7 @@ a:hover{
     </div>
 </section>  
   
-<section class="scene">
+<section class="scene" id="scene-0510">
     <h2>0510杭响｜鸳鸯牛仔裤</h2>
     <div class="keywords">八十之约
       “你是叫我妈妈吗”
@@ -207,7 +249,7 @@ a:hover{
     </div>
 </section>  
   
-<section class="scene">
+<section class="scene" id="scene-0517">
     <h2>0517川响｜花西装ft.花花</h2>
     <div class="keywords">排山倒海汹涌澎湃冲着台上就去了的爱
       “咦不会讲话了”
@@ -216,7 +258,7 @@ a:hover{
     </div>
 </section>  
   
-<section class="scene">
+<section class="scene" id="scene-0524">
     <h2>0524京响｜allwhite腰封美女蛇</h2>
     <div class="keywords">算不清五年还是九年
       “我开心得迷糊了”
@@ -227,7 +269,7 @@ a:hover{
     </div>
 </section>  
   
-<section class="scene">
+<section class="scene" id="scene-0531">
     <h2>0531晋响｜皮裤酒保</h2>
     <div class="keywords">突然自我介绍
       “回忆的片dun…片段”
@@ -236,7 +278,7 @@ a:hover{
     </div>
 </section>  
   
-<section class="scene">
+<section class="scene" id="scene-0621">
     <h2>0621汕响｜暖羊羊妈妈</h2>
     <div class="keywords">挥手全是残影
       “係唔係真㗎～～😲”
@@ -245,7 +287,7 @@ a:hover{
     </div>
 </section>  
   
-<section class="scene">
+<section class="scene" id="scene-0705">
     <h2>0705沪响｜白蕾丝囡囡</h2>
     <div class="keywords">最痛的红颜野花
       亮片焊头死活摘不下来
@@ -255,7 +297,7 @@ a:hover{
     </div>
 </section>  
   
-<section class="scene">
+<section class="scene" id="scene-0712">
     <h2>0712宁响｜灰花裤跳跳糖</h2>
     <div class="keywords">横开来回跑八百
       “我巴不得我可以飞起来！”
@@ -268,7 +310,7 @@ a:hover{
     </div>
 </section>  
   
-<section class="scene">
+<section class="scene" id="scene-0719">
     <h2>0719澳响｜穿身气球就来打台风了</h2>
     <div class="keywords">“好嘢好嘢～😁”
       国粤英三语切换为拿花
@@ -277,20 +319,20 @@ a:hover{
     </div>
 </section>  
   
-<section class="scene">
+<section class="scene" id="scene-0725">
     <h2>0725澳响｜腋下生风狂抓头发</h2>
     <div class="keywords">最震撼的一场莲合国国歌
       “都好多謝大家風雨不改的照舊來到”
     </div>
 </section>  
   
-<section class="scene">
+<section class="scene" id="scene-0726">
     <h2>0726澳响｜白衬衫阿芙洛狄忒</h2>
     <div class="keywords">726都能忘不如响学重修呢？
     </div>
 </section>  
   
-<section class="scene">
+<section class="scene" id="scene-0727">
     <h2>0727澳响｜外浅內深但深的是背心</h2>
     <div class="keywords">“我哋係好多年嘅朋友”
       “幫我攞花花花”
@@ -298,7 +340,7 @@ a:hover{
     </div>
 </section>  
   
-<section class="scene">
+<section class="scene" id="scene-0802">
     <h2>0802春响｜大到能给内场塞进去的萝卜裤</h2>
     <div class="keywords">“刚刚大家没有跟着我一起唱呢——”
       “你当时只有七岁！”
@@ -307,7 +349,7 @@ a:hover{
     </div>
 </section>  
   
-<section class="scene">
+<section class="scene" id="scene-0809">
     <h2>0809青响｜短裤大露背</h2>
     <div class="keywords">钢筋森林勾手指
       水星记挑眉毛
@@ -328,7 +370,7 @@ a:hover{
     </div>
 </section>  
   
-<section class="scene">
+<section class="scene" id="scene-0913">
     <h2>0913津响｜风吹大门框帅得响当当黑马甲</h2>
     <div class="keywords">归零作文咋改写一半撒一半了
       “先把电话放下来好不好～？”
@@ -354,7 +396,7 @@ a:hover{
     </div>
 </section>  
   
-<section class="scene">
+<section class="scene" id="scene-0920">
     <h2>0920温响｜花衣黄裤紫罗兰</h2>
     <div class="keywords">“雨下得越来越大了——！”
       你们唱歌也好听
@@ -366,7 +408,7 @@ a:hover{
     </div>
 </section>  
   
-<section class="scene">
+<section class="scene" id="scene-1002">
     <h2>1002佛响｜星星项链小波斯</h2>
     <div class="keywords">世纪莲在世纪莲
       “好似返屋企嘅感覺”
@@ -379,7 +421,7 @@ a:hover{
     </div>
 </section>  
   
-<section class="scene">
+<section class="scene" id="scene-1007">
     <h2>1007肥响｜小肚小肚软乎乎小山雀</h2>
     <div class="keywords">新裙子
       勒脖子盖亚找左手小品
@@ -395,7 +437,7 @@ a:hover{
     </div>
 </section>
   
-<section class="scene">
+<section class="scene" id="scene-1018">
     <h2>1018湘响｜西装皮裤歌王回宫</h2>
     <div class="keywords">“好久不见……大家好吗？🥹”
       窗口长了眼睛～🖖🏻
@@ -407,7 +449,7 @@ a:hover{
     </div>
 </section>  
   
-<section class="scene">
+<section class="scene" id="scene-1025">
     <h2>1025苏响｜一堆黑布拼一起就是一件外套</h2>
     <div class="keywords">唱能记住词硬想就不行
       “想要吃面？”
@@ -422,7 +464,7 @@ a:hover{
     </div>
 </section>  
   
-<section class="scene">
+<section class="scene" id="scene-1101">
     <h2>1101豫响｜小牛仔</h2>
     <div class="keywords">主人级别的流星群桥
       走几步再得瑟地晃两下头
@@ -440,7 +482,7 @@ a:hover{
     </div>
 </section>  
   
-<section class="scene">
+<section class="scene" id="scene-1108">
     <h2>1108西响｜炕一般保暖的大衣</h2>
     <div class="keywords">自行创造的鹦鹉头
       彻底给开忘是第几场了
@@ -451,7 +493,7 @@ a:hover{
     </div>
 </section>  
   
-<section class="scene">
+<section class="scene" id="scene-1115">
     <h2>1115渝响｜常服顺毛流苏戒指</h2>
     <div class="keywords">“不要躲起来～”
       重庆交通系统科研
@@ -465,7 +507,7 @@ a:hover{
     </div>
 </section>  
   
-<section class="scene">
+<section class="scene" id="scene-1122">
   <h2>1122湖响｜oldmoney小林总</h2>
     <div class="keywords">饭撒！比个冬枣！
       “啊对不起我说chuò了”
@@ -479,7 +521,7 @@ a:hover{
     </div>
 </section>  
   
-<section class="scene">
+<section class="scene" id="scene-1206">
   <h2>1206福响｜黑丝配大船</h2>
     <div class="keywords">“简直是……匪夷所shī💧”
       妈妈女王对狙感冒状态神勇
@@ -492,7 +534,7 @@ a:hover{
     </div>
 </section>  
   
-<section class="scene">
+<section class="scene" id="scene-1231">
   <h2>1231深响跨年｜会跳舞的白玉团子</h2>
     <div class="keywords">是最混乱也是最幸福的莲合国团圆饭
       倾斜爆装备
@@ -520,7 +562,7 @@ a:hover{
     </div>
 </section>  
   
-<section class="scene">
+<section class="scene" id="scene-0103">
   <h2>0103深响终章｜金链子小喜鹊</h2>
     <div class="keywords">内场空前绝后的脚动降舱盛况
       远走高飞忍眼泪
@@ -534,10 +576,9 @@ a:hover{
     </div>
 </section>
 
-<section class="scene">
+<section class="scene" id="scene-0102">
   <h2>ps. 0102历代级彩排</h2>
     <div class="keywords"><a href="https://weibo.com/2646961767/QligUaGw7" target="_blank">“大家乖乖回去，风很大，昂”</a> cr@-JY在远航-
-      <a href="https://weibo.com/5994544348/5250754814151749" target="_blank">盖亚彩排飞出来的无人机</a> cr@番茄炖个莲子汤
     </div>
 </section>
 
