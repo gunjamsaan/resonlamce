@@ -27,18 +27,18 @@
     }
 
     .content-layout {
-    display: grid;
-    grid-template-columns: 120px minmax(0, 1fr);
-    gap: 32px;
-    align-items: start;
+    position: relative;
+    padding-left: 160px;
     }
 
     .side-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 120px;
     display: flex;
     flex-direction: column;
     gap: 12px;
-    z-index: 1000;
     }
 
     .side-nav-item {
@@ -673,44 +673,6 @@
       input.blur();
     }
   });
-</script>
-<script>
-  const sideNav = document.getElementById("sideNav");
-  const contentShell = document.querySelector(".content-shell");
-
-  function updateSideNavPosition() {
-    if (!sideNav || !contentShell) return;
-    if (window.innerWidth <= 768) return;
-
-    const shellRect = contentShell.getBoundingClientRect();
-    const shellTop = window.scrollY + shellRect.top;
-    const shellBottom = shellTop + contentShell.offsetHeight;
-
-    const fixedTop = 355;
-    const navHeight = sideNav.offsetHeight;
-    const currentScroll = window.scrollY;
-
-    const startFixAt = shellTop - fixedTop;
-    const stopFixAt = shellBottom - fixedTop - navHeight;
-
-    if (currentScroll < startFixAt) {
-      sideNav.style.position = "absolute";
-      sideNav.style.top = "0";
-      sideNav.style.left = "0";
-    } else if (currentScroll > stopFixAt) {
-      sideNav.style.position = "absolute";
-      sideNav.style.top = `${contentShell.offsetHeight - navHeight}px`;
-      sideNav.style.left = "0";
-    } else {
-      sideNav.style.position = "fixed";
-      sideNav.style.top = `${fixedTop}px`;
-      sideNav.style.left = `${contentShell.getBoundingClientRect().left}px`;
-    }
-  }
-
-  window.addEventListener("scroll", updateSideNavPosition);
-  window.addEventListener("resize", updateSideNavPosition);
-  window.addEventListener("load", updateSideNavPosition);
 </script>
 </body>
 </html>
