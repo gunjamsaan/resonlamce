@@ -22,24 +22,24 @@
       margin: 0 auto;
     }
 
+    .content-shell{
+      position: relative;
+    }
+
     .content-layout {
     display: grid;
     grid-template-columns: 120px minmax(0, 1fr);
     gap: 32px;
     align-items: start;
     }
-      
+
     .side-nav {
-    position: sticky;
-    top: 120px;
+    width: 120px;
     display: flex;
     flex-direction: column;
     gap: 12px;
-    align-self: start;
-    max-height: calc(100vh - 140px);
-    overflow-y: auto;
-    padding-right: 6px;
-    } 
+    z-index: 1000;
+    }
 
     .side-nav-item {
     display: inline-flex;
@@ -181,9 +181,10 @@
   </p>
 
     <hr/>
-  <div class="content-layout">
-    <nav class="side-nav">
-  <a href="#top" class="side-nav-item">顶部</a>
+  <div class="content-shell">
+    <div class="content-layout">
+      <nav class="side-nav" id="sideNav">
+  <a href="#top" class="side-nav-item">🪷</a>
   <a href="#scene-0222" class="side-nav-item">深圳首场</a>
   <a href="#scene-0301" class="side-nav-item">厦门</a>
   <a href="#scene-0308" class="side-nav-item">南宁</a>
@@ -638,7 +639,8 @@
     </div>
 </section>
 
-  </div>
+      </div>
+    </div>
   </div>
 </div>
   
@@ -671,6 +673,44 @@
       input.blur();
     }
   });
+</script>
+<script>
+  const sideNav = document.getElementById("sideNav");
+  const contentShell = document.querySelector(".content-shell");
+
+  function updateSideNavPosition() {
+    if (!sideNav || !contentShell) return;
+    if (window.innerWidth <= 768) return;
+
+    const shellRect = contentShell.getBoundingClientRect();
+    const shellTop = window.scrollY + shellRect.top;
+    const shellBottom = shellTop + contentShell.offsetHeight;
+
+    const fixedTop = 355;
+    const navHeight = sideNav.offsetHeight;
+    const currentScroll = window.scrollY;
+
+    const startFixAt = shellTop - fixedTop;
+    const stopFixAt = shellBottom - fixedTop - navHeight;
+
+    if (currentScroll < startFixAt) {
+      sideNav.style.position = "absolute";
+      sideNav.style.top = "0";
+      sideNav.style.left = "0";
+    } else if (currentScroll > stopFixAt) {
+      sideNav.style.position = "absolute";
+      sideNav.style.top = `${contentShell.offsetHeight - navHeight}px`;
+      sideNav.style.left = "0";
+    } else {
+      sideNav.style.position = "fixed";
+      sideNav.style.top = `${fixedTop}px`;
+      sideNav.style.left = `${contentShell.getBoundingClientRect().left}px`;
+    }
+  }
+
+  window.addEventListener("scroll", updateSideNavPosition);
+  window.addEventListener("resize", updateSideNavPosition);
+  window.addEventListener("load", updateSideNavPosition);
 </script>
 </body>
 </html>
