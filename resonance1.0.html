@@ -21,10 +21,6 @@
       max-width: 720px;
       margin: 0 auto;
     }
-
-.content-shell {
-  position: relative;
-}
     
 .content-layout {
   display: grid;
@@ -34,14 +30,15 @@
 }
 
 .side-nav {
-  position: fixed;
-  top: 355px;
-  left: calc(50% - 360px);
-  width: 120px;
+  position: sticky;
+  top: 120px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  z-index: 1000;
+  align-self: start;
+  max-height: calc(100vh - 140px);
+  overflow-y: auto;
+  padding-right: 6px;
 }
 
 .side-nav-item {
@@ -184,9 +181,8 @@
   </p>
 
     <hr/>
-  <div class="content-shell">
     <div class="content-layout">
-      <nav class="side-nav" id="sideNav">
+  <nav class="side-nav" id="sideNav">
   <a href="#top" class="side-nav-item">🪷</a>
   <a href="#scene-0222" class="side-nav-item">深圳首场</a>
   <a href="#scene-0301" class="side-nav-item">厦门</a>
