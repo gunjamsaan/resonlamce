@@ -22,10 +22,10 @@
       margin: 0 auto;
     }
 
-    .content-shell {
+.content-shell {
   position: relative;
 }
-
+    
 .content-layout {
   display: grid;
   grid-template-columns: 120px minmax(0, 1fr);
@@ -33,18 +33,15 @@
   align-items: start;
 }
 
-.side-nav-col {
-  align-self: start;
-}
-
-.side-nav-sticky {
-  position: sticky;
-  top: 120px;
+.side-nav {
+  position: fixed;
+  top: 355px;
+  left: calc(50% - 360px);
+  width: 120px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  max-height: calc(100vh - 140px);
-  overflow-y: auto;
+  z-index: 1000;
 }
 
 .side-nav-item {
@@ -189,8 +186,7 @@
     <hr/>
   <div class="content-shell">
     <div class="content-layout">
-      <aside class="side-nav-col">
-      <nav class="side-nav-sticky">
+      <nav class="side-nav" id="sideNav">
   <a href="#top" class="side-nav-item">🪷</a>
   <a href="#scene-0222" class="side-nav-item">深圳首场</a>
   <a href="#scene-0301" class="side-nav-item">厦门</a>
@@ -227,7 +223,6 @@
   <a href="#scene-1231" class="side-nav-item">深圳跨年</a>
   <a href="#scene-0103" class="side-nav-item">深圳尾场</a>
 </nav>
-</aside>
 
 <div class="scene-list">
     <section class="scene" id="scene-0222">
