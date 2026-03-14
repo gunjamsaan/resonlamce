@@ -22,50 +22,56 @@
       margin: 0 auto;
     }
 
-    .content-shell{
-      position: relative;
-    }
+    .content-shell {
+  position: relative;
+}
 
-    .content-layout {
-    position: relative;
-    padding-left: 160px;
-    }
+.content-layout {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 32px;
+  align-items: start;
+}
 
-    .side-nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 120px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    }
+.side-nav-col {
+  align-self: start;
+}
 
-    .side-nav-item {
-    display: inline-flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    padding: 10px 14px;
-    border-radius: 999px;
-    background: rgba(244, 122, 0, 0.12);
-    color: #f47a00;
-    text-decoration: none;
-    font-family: "Inter", sans-serif;
-    font-size: 14px;
-    line-height: 1;
-    transition: transform 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
-    }
+.side-nav-sticky {
+  position: sticky;
+  top: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: calc(100vh - 140px);
+  overflow-y: auto;
+}
 
-    .side-nav-item:hover {
-    transform: translateX(8px);
-    background: rgba(244, 122, 0, 0.2);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-    }
+.side-nav-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(244, 122, 0, 0.12);
+  color: #f47a00;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  transition: transform 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
+}
 
-    .scene-list {
-    min-width: 0;
-    }
+.side-nav-item:hover {
+  transform: translateX(8px);
+  background: rgba(244, 122, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.scene-list {
+  min-width: 0;
+}
     
     html {
     scroll-behavior: smooth;
@@ -183,7 +189,8 @@
     <hr/>
   <div class="content-shell">
     <div class="content-layout">
-      <nav class="side-nav" id="sideNav">
+      <aside class="side-nav-col">
+      <nav class="side-nav-sticky">
   <a href="#top" class="side-nav-item">🪷</a>
   <a href="#scene-0222" class="side-nav-item">深圳首场</a>
   <a href="#scene-0301" class="side-nav-item">厦门</a>
@@ -220,6 +227,7 @@
   <a href="#scene-1231" class="side-nav-item">深圳跨年</a>
   <a href="#scene-0103" class="side-nav-item">深圳尾场</a>
 </nav>
+</aside>
 
 <div class="scene-list">
     <section class="scene" id="scene-0222">
