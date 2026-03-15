@@ -1,1 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🟠Resonance: Reconstructed🟠</title>
 
+  <style>
+    body {
+    margin: 0;
+    padding: 24px 20px 60px;
+    background: #ffffff;
+    color: #f47a00;
+    font-family: -apple-system, BlinkMacSystemFont,
+                "PingFang SC", "Noto Sans CJK SC",
+                "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.8;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .page-tail-watermark {
+  margin-top: 48px;
+  margin-left: 0;
+  padding-bottom: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: rgba(244, 122, 0, 0.45);
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.page-tail-mark {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.page-tail-text {
+  letter-spacing: 0.04em;
+}
+h1 {
+    font-size: 2em;
+    margin-bottom: 0.4em;
+  }
+
+  h2 {    
+    margin-top: 2em;
+    font-size: 1.4em;
+    border-left: 4px solid #f47a00;
+    padding-left: 12px;
+  }
+    
+  .scene-list .scene:first-child h2 {
+    margin-top: 0;
+  }
+
+  .keywords {
+    margin: 1em 0;
+    padding: 12px 16px;
+    background: rgba(244, 122, 0, 0.8);
+    border-radius: 6px;
+    font-size: 0.95em;
+    color: #ffffff;
+    white-space: pre-line;
+  }
+
+  .entry {
+    white-space: pre-line;
+    margin-top: 1em;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid rgba(244, 122, 0, 0.35);
+    margin: 3em 0;
+  }
+
+  .topbar{
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    z-index: 999;
+  }
+
+  #search{
+    width: 250px;
+    padding: 11px 16px;
+    border-radius: 999px;
+    border: 1.5px solid rgba(244, 122, 0, 0.45);
+    background: rgba(255, 255, 255, 0.92);
+    color: #f47a00;
+    outline: none;
+    font-size: 14px;
+    box-shadow: 0 4px 14px rgba(244, 122, 0, 0.08);
+    transition: all 0.2s ease;
+    }
+
+  #search::placeholder{
+    color: rgba(244, 122, 0, 0.55);
+    }
+
+  #search:focus{
+    border-color: #f47a00;
+    box-shadow: 0 0 0 4px rgba(244, 122, 0, 0.12);
+    }
+
+  .scene[hidden]{
+    display: none;
+    }
+    
+  .notes span{
+    display: block;
+    margin-top: 6px;
+    }
+
+  a{
+    color: #f47a00;
+    text-decoration: none;
+  }
+
+  a:hover{
+    text-decoration: underline;
+  }
+    .keywords a {
+  color: #fff7cc;
+}
+
+.keywords a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+  </style>
+</head>
+
+
+<body>
+  <div class="container" id = "top">
+    <div class="topbar">
+  <input id="search" type="search" placeholder="搜索 场次 / 安可服 / 莲言莲语" autocomplete="off">
+</div>
+
+    <h1>【搜响引擎5.0】🪷莲合国莲语等级考试复习资料·迴響Resonance: Reconstructed卷🪷</h1>
+    <p class="notes">
+  <span>-> 260314编辑</span><br>
+  <span>-> 5.0预告:RESONANCE: Reconstructed 0516/0517港响</span>
+  </p>
+
+    <section>
+    <h2>0516HK Exclusive第一晚</h2>
+
+    <div class="keywords">
+    </div>
+</section> 
+
+  <div class="page-tail-watermark">
+  <span class="page-tail-mark">🪷</span>
+  <span class="page-tail-text">gunjamsaan.2026</span>
+  </div>
+
+  <script>
+  const input = document.getElementById("search");
+  const scenes = Array.from(document.querySelectorAll(".scene"));
+
+  function normalize(text){
+    return (text || "").toLowerCase();
+  }
+
+  input.addEventListener("input", () => {
+    const q = normalize(input.value);
+
+    if (!q) {
+      scenes.forEach(s => s.hidden = false);
+      return;
+    }
+
+    scenes.forEach(scene => {
+      const content = normalize(scene.innerText);
+      scene.hidden = !content.includes(q);
+    });
+  });
+
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      input.value = "";
+      input.dispatchEvent(new Event("input"));
+      input.blur();
+    }
+  });
+</script>
+</body>
+</html>
