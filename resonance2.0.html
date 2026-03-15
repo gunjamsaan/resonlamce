@@ -134,11 +134,33 @@ h1 {
   color: #ffffff;
   text-decoration: underline;
 }
+    
+  .home-mark {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  z-index: 1000;
+  color: #f47a00;
+  text-decoration: none;
+  font-family: "Bona Nova", serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  opacity: 0.9;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.home-mark:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
   </style>
 </head>
 
 
 <body>
+  <a href="./index.html" class="home-mark">RESONLAMCE</a>
   <div class="container" id = "top">
     <div class="topbar">
   <input id="search" type="search" placeholder="搜索 场次 / 安可服 / 莲言莲语" autocomplete="off">
