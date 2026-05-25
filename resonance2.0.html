@@ -21,7 +21,53 @@
       max-width: 720px;
       margin: 0 auto;
     }
-    .page-tail-watermark {
+    
+.content-layout {
+  display: grid;
+  grid-template-columns: 102px minmax(0, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+
+.side-nav {
+  position: sticky;
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-self: start;
+  max-height: calc(100vh - 140px);
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.side-nav-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: flex-start;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(244, 122, 0, 0.12);
+  color: #f47a00;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  transition: transform 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
+}
+
+.side-nav-item:hover {
+  transform: translateX(8px);
+  background: rgba(244, 122, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.scene-list {
+  min-width: 0;
+}
+    
+.page-tail-watermark {
   margin-top: 48px;
   margin-left: 0;
   padding-bottom: 64px;
@@ -43,7 +89,51 @@
 .page-tail-text {
   letter-spacing: 0.04em;
 }
-h1 {
+}
+    
+html {
+    scroll-behavior: smooth;
+    }
+    
+.home-mark {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  z-index: 1000;
+  color: #f47a00;
+  text-decoration: none;
+  font-family: "Bona Nova", serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  opacity: 0.9;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.home-mark:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-top: 36px;
+  }
+  .side-nav {
+    display: none;
+  }
+  .content-layout{
+    display: block;
+  }
+  .home-mark {
+    display: none;
+  }
+}
+
+
+  h1 {
     font-size: 2em;
     margin-bottom: 0.4em;
   }
@@ -124,7 +214,7 @@ h1 {
   }
 
   a:hover{
-    text-decoration: underline;
+    text-decoration: none;
   }
     .keywords a {
   color: #fff7cc;
@@ -132,43 +222,13 @@ h1 {
 
 .keywords a:hover {
   color: #ffffff;
-  text-decoration: underline;
-}
-    
-  .home-mark {
-  position: fixed;
-  top: 24px;
-  left: 24px;
-  z-index: 1000;
-  color: #f47a00;
   text-decoration: none;
-  font-family: "Bona Nova", serif;
-  font-size: 28px;
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: -0.02em;
-  opacity: 0.9;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.home-mark:hover {
-  opacity: 1;
-  transform: translateY(-1px);
-  text-decoration: none;
-}
-
-@media (max-width: 768px) {
-  .container {
-    padding-top: 36px;
-  }
-  .home-mark {
-    display: none;
-  }
 }
   </style>
 </head>
 
 
+  
 <body>
   <a href="./index.html" class="home-mark">RESONLAMCE</a>
   <div class="container" id = "top">
@@ -181,37 +241,50 @@ h1 {
   <span>-> 260525编辑</span>
   </p>
 
-    <section>
-    <h2>0516 HK Exclusive Day1｜落汤小燕子</h2>
-    试音忘关麦，一句reflection出来全场沸腾结果无事发生
-    回响时代第一个完整版的天大地大
-    逃离钢筋森林从广播体操变成指挥交通
-    世上第一次记载了林忆莲solo版的下雨天
-    喜迎蝴蝶船
-    喜乐全宇宙大首唱
-    扬手送同行一份回响大礼并作出了香港乐坛还得练的指导
-    你是我的男人到底多少年没唱
-    象征性收一下点唱结果没想到吧痴缠来了
-    痴缠还只能空出一只手比心，到早晨已经是空不出手也硬得让它空出来比。
-    早晨喜提双飞吻。第一个没声第二个响彻启德。
-    “好靓仔啊你今晚”
-    感情不老头顶逆光爱心。一块皱巴巴的小面包。
+    <hr/>
+    <div class="content-layout">
+  <nav class="side-nav" id="sideNav">
+  <a href="#top" class="side-nav-item">🪷</a>
+  <a href="#scene-0516" class="side-nav-item">香港Day1</a>
+  <a href="#scene-0517" class="side-nav-item">香港Day2</a>
+</nav>
+
+<div class="scene-list">
+    <section class="scene" id="scene-0516">
+    <h2>0516港响Day1｜落汤小燕子</h2>
+
+    <div class="keywords">试音忘关麦，一句reflection出来全场沸腾结果无事发生
+      回响时代第一个完整版的天大地大
+      逃离钢筋森林从广播体操变成指挥交通
+      世上第一次记载了林忆莲solo版的下雨天
+      喜迎蝴蝶船
+      喜乐全宇宙大首唱
+      扬手送同行一份回响大礼并作出了香港乐坛还得练的指导
+      你是我的男人到底多少年没唱
+      象征性收一下点唱结果没想到吧痴缠来了
+      痴缠还只能空出一只手比心，到早晨已经是空不出手也硬得让它空出来比。
+      早晨喜提双飞吻。第一个没声第二个响彻启德。
+      “好靓仔啊你今晚”
+      感情不老头顶逆光爱心。一块皱巴巴的小面包。
+    </div>
+</section>  
+  
+<section class="scene" id="scene-0517">
+    <h2>0517港响Day2｜红风衣Sandiva</h2>
+  
     <div class="keywords">
     </div>
-
-    <h2>0517 HK Exclusive Day2｜红风衣Sandiva</h2>
-    
-    <div class="keywords">
-    </div>
-
-      
-</section> 
+</section>  
 
   <div class="page-tail-watermark">
   <span class="page-tail-mark">🪷</span>
   <span class="page-tail-text">gunjamsaan.2026</span>
   </div>
-
+      </div>
+    </div>
+  </div>
+</div>
+  
   <script>
   const input = document.getElementById("search");
   const scenes = Array.from(document.querySelectorAll(".scene"));
